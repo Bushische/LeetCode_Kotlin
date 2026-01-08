@@ -53,6 +53,37 @@ class TreeNode(
             return root
         }
 
+        /**
+         * Print the tree to console
+         */
+        fun printTreeNode(
+            root: TreeNode?,
+            indent: String = "",
+        ) {
+            if (root == null) {
+                println("${indent}null")
+                return
+            }
+            printTreeNode(root?.left, "$indent..")
+            println("$indent${root?.`val`}")
+            printTreeNode(root?.right, "$indent,,")
+        }
+
+        fun equals(
+            root1: TreeNode?,
+            root2: TreeNode?,
+        ): Boolean {
+            if ((root1 == null) && (root2 == null)) {
+                return true
+            }
+            if ((root1 == null) || (root2 == null)) {
+                return false
+            }
+            return (root1.`val` == root2.`val`) &&
+                (equals(root1.left, root2.left)) &&
+                (equals(root1.right, root2.right))
+        }
+
         // utility to get safely
         private fun getByIndexOrNull(
             nums: List<Int?>,
