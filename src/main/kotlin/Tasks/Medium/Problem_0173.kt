@@ -52,6 +52,33 @@ Could you implement next() and hasNext() to run in average O(1) time and use O(h
     public class BSTIterator(
         root: TreeNode?,
     ) {
+        val stack = ArrayDeque<TreeNode>()
+
+        // constructor
+        init {
+            fillStack(root)
+        }
+
+        fun next(): Int {
+            var result = stack.removeLast()
+            val returnResult = result.`val`
+            fillStack(result.right)
+            return returnResult
+        }
+
+        fun hasNext(): Boolean = stack.isNotEmpty()
+
+        private fun fillStack(node: TreeNode?) {
+            if (node != null) {
+                stack.add(node)
+                fillStack(node.left)
+            }
+        }
+    }
+
+    public class BSTIteratorv1(
+        root: TreeNode?,
+    ) {
         fun next(): Int {
             val returnValue = currentTreeNode?.`val` ?: throw IllegalStateException()
             // println("current: $returnValue")

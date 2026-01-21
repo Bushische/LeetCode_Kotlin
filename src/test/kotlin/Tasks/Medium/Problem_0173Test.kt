@@ -5,9 +5,9 @@ import leetcode.tasks.medium.Problem_0173.BSTIterator
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
-class Problem_0173Test{
+class Problem_0173Test {
     @Test
-    fun example1(){
+    fun example1() {
         val inputTreeList = listOf<Int?>(7, 3, 15, null, null, 9, 20)
         val root = TreeNode.fromArray(inputTreeList)
 
