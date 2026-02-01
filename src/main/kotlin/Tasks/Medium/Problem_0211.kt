@@ -76,7 +76,7 @@ At most 10^4 calls will be made to addWord and search.
                 } else {
                     val head = word[0]
                     val nextWord = word.substring(1)
-                    println("Trie add: head=`$head` nextWord=`$nextWord`")
+                    // println("Trie add: head=`$head` nextWord=`$nextWord`")
 
                     val nextTrie = if (branches.containsKey(head)) branches[head] else Trie()
                     branches.set(head, nextTrie!!)
