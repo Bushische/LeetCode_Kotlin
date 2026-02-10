@@ -69,8 +69,8 @@ Find the biggest n and calculate square = n*n
                 }
             }
             // println("original matrix: $matrix")
-            println("sequences matrix")
-            printMatrix(matrixOfSequences)
+            // println("sequences matrix")
+            // printMatrix(matrixOfSequences)
 
             // check the array of sequences by the rule
             // utility function
