@@ -67,7 +67,7 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
                 }
             }
 
-            println("1 >> can1=$candidate1 cnt1=$counter1 can2=$candidate2 cnt2=$counter2")
+            // println("1 >> can1=$candidate1 cnt1=$counter1 can2=$candidate2 cnt2=$counter2")
 
             // calculate real number of appearance
             counter1 = 0
@@ -79,7 +79,7 @@ Follow up: Could you solve the problem in linear time and in O(1) space?
                 }
             }
 
-            println("2 >> can1=$candidate1 cnt1=$counter1 can2=$candidate2 cnt2=$counter2")
+            // println("2 >> can1=$candidate1 cnt1=$counter1 can2=$candidate2 cnt2=$counter2")
 
             var outList = mutableListOf<Int>()
             var threshold = nums.size / 3
