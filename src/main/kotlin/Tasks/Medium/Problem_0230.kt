@@ -67,7 +67,7 @@ Follow up: If the BST is modified often (i.e., we can do insert and delete opera
             // fill left branch to stack and go deep left. Without changes `remain`
             node = fillLeft(node)
             while (node != null) {
-                println("while: node=${node.`val`} remain=$remain stack=${stack.joinToString(","){it.`val`.toString()}}")
+                // println("while: node=${node.`val`} remain=$remain stack=${stack.joinToString(","){it.`val`.toString()}}")
                 if (remain == 1) {
                     return node.`val`
                 }
