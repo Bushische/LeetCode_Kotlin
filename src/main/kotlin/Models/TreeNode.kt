@@ -84,6 +84,25 @@ class TreeNode(
                 (equals(root1.right, root2.right))
         }
 
+        /** Find a first left node with `val` equals to the elem */
+        fun findNode(
+            root: TreeNode?,
+            elem: Int,
+        ): TreeNode? {
+            if (root == null) {
+                return null
+            }
+            if (root.`val` == elem) {
+                return root
+            }
+            val leftSearch = findNode(root.left, elem)
+            if (leftSearch != null) {
+                return leftSearch
+            }
+            val rightSearch = findNode(root.right, elem)
+            return rightSearch
+        }
+
         // utility to get safely
         private fun getByIndexOrNull(
             nums: List<Int?>,
