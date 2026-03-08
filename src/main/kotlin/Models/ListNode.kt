@@ -41,5 +41,22 @@ class ListNode(
 
             return list.toList()
         }
+
+        /**
+         * Search for a first node with `val` equals to searchVal
+         */
+        fun findNode(
+            head: ListNode?,
+            searchVal: Int,
+        ): ListNode? {
+            var cur = head
+            while (cur != null) {
+                if (cur.`val` == searchVal) {
+                    return cur
+                }
+                cur = cur.next
+            }
+            return null
+        }
     }
 }
