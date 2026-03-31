@@ -166,7 +166,7 @@ The integer values in the input expression do not have a leading '-' or '+' deno
             }
 
         private fun log(message: String) {
-            if (true) {
+            if (false) {
                 println(message)
             }
         }
